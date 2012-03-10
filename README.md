@@ -2,6 +2,8 @@ Mimeo is the airplane mode for your application. Automatically cache and then se
 
 Mimeo comes in two flavors, each express.js HTTP servers, so they're easily attached to any existing application. You can also use it standalone, though the `mimeo` command-line interface. Lastly, Mimeo is packaged together with [Draughtsman](https://github.com/stdbrouw/draughtsman), a web server that aids in front-end prototyping and development.
 
+Mimeo will keep files cached indefinitely so don't use it for files that change often. Mimeo does not understand HTTP cache or expires headers.
+
 ## The cache servers
 
 ### Generic server
