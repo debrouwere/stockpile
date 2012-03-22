@@ -1,3 +1,7 @@
+# Mimeo
+
+[![Build Status](https://secure.travis-ci.org/stdbrouw/mimeo.png)](http://travis-ci.org/stdbrouw/mimeo)
+
 Mimeo is the airplane mode for your application. Automatically cache and then serve common JavaScript libraries or any kind of file from your development machine. Why? Because localhost is always faster and because being able to code without an internet connection is still kind of useful sometimes.
 
 Mimeo comes in two flavors, each express.js HTTP servers, so they're easily attached to any existing application. You can also use it standalone, though the `mimeo` command-line interface. Lastly, Mimeo is packaged together with [Draughtsman](https://github.com/stdbrouw/draughtsman), a web server that aids in front-end prototyping and development.

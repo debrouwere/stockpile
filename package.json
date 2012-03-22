@@ -11,10 +11,16 @@
     "node": "~0.6.10"
   },
   "dependencies": {
+    "coffee-script": "1.x",
     "express": "2.x",
     "request": "2.x",
     "mime": "1.x",
   },
-  "devDependencies": {},
-  "optionalDependencies": {}
+  "devDependencies": {
+    "mocha": "0.14.x"
+  },
+  "optionalDependencies": {},
+  "scripts": {
+    "install": "make"
+  }
 }

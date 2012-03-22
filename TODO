@@ -1,0 +1,3 @@
+* &ttl => cache invalidation (we can stash ttls in a .json file in the cache)
+* &fallback => always fetch live unless we get a 304 or have no internet connection
+* CLI
