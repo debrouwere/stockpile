@@ -8,7 +8,7 @@ Mimeo comes in two flavors, each express.js HTTP servers, so they're easily atta
 
 Mimeo will keep files cached indefinitely so don't use it for files that change often. Mimeo does not understand HTTP cache or expires headers.
 
-Install with `npm install mimeograph`.
+Install with `npm install mimeoc`.
 
 ## The cache servers
 
