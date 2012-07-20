@@ -1,12 +1,12 @@
 {
   "author": "Stijn Debrouwere <stijn@stdout.be> (http://stdout.be)",
-  "name": "mimeoc",
-  "description": "Mimeo is the airplane mode for your application. Automatically cache and serve common JavaScript libraries or any kind of file from your development machine.",
-  "version": "0.2.0",
+  "name": "stockpile",
+  "description": "Stockpile is the airplane mode for your application. Automatically cache and serve common JavaScript libraries or any kind of file from your development machine.",
+  "version": "0.2.1",
   "repository": {
-    "url": "https://github.com/stdbrouw/mimeo"
+    "url": "https://github.com/stdbrouw/stockpile"
   },
-  "bin" : "./bin/mimeo",
+  "bin" : "./bin/stockpile",
   "main": "lib/index.js",
   "engines": {
     "node": "~0.6.10"
