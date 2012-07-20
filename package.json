@@ -6,6 +6,7 @@
   "repository": {
     "url": "https://github.com/stdbrouw/mimeo"
   },
+  "bin" : "./bin/mimeo",
   "main": "lib/index.js",
   "engines": {
     "node": "~0.6.10"
