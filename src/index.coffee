@@ -35,7 +35,7 @@ class FileCache
     clean: ->
         fs.rmdirSync @basepath
 
-exports.filecache = new FileCache fs.path.join __dirname, '../cache'
+exports.filecache = filecache = new FileCache fs.path.join __dirname, '../cache'
 exports.servers =
     cache: express.createServer()
     libs: express.createServer()
@@ -48,10 +48,10 @@ cached_proxy = (req, res) ->
     unless url?
         res.send 404
     # test cache
-    exports.filecache.get url, (errors, file) ->
-        mime = mime.lookup url
+    filecache.get url, (errors, file) ->
+        contentType = mime.lookup url
         if file?
-            res.contentType mime
+            res.contentType contentType
             res.send file
         else
             # fetch if not in cache, and then put in cache
@@ -60,7 +60,7 @@ cached_proxy = (req, res) ->
                     res.send 404
                 else
                     filecache.put url, body
-                    res.contentType mime
+                    res.contentType contentType
                     res.send body
 
 # your run of the mill file cache, will fetch from the web at first and then keep the file
@@ -72,5 +72,5 @@ exports.servers.cache.get '/', cached_proxy
 # of common JavaScript libraries, e.g. http://localhost:4000/jquery/1.7.1/jquery.min.js
 exports.servers.libs.get '*', (req, res) ->
     url = 'http://cdnjs.cloudflare.com/ajax/libs' + req.path
-    req.query.url = url
+    req.query.url ?= url
     cached_proxy req, res

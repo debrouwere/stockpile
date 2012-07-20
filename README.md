@@ -14,13 +14,13 @@ Mimeo will keep files cached indefinitely so don't use it for files that change 
 
 The `servers.cache` server will fetch and then immediately cache anything you ask of it. For example: 
 
-    http://localhost:4000/?url=http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    http://localhost:3500/?url=http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js
 
 ### JavaScript library server
 
 This server provides a shortcut for quickly fetching and then serving cached versions of common JavaScript libraries. Anything that's not already in its cache, it will fetch from CloudFlare's CDNJS content delivery network. Here's an example that's equivalent to the first one:
 
-    http://localhost:4000/jquery/1.7.1/jquery.min.js
+    http://localhost:3500/jquery/1.7.1/jquery.min.js
 
 ## API
 
@@ -28,11 +28,21 @@ For now, read the code. (All 80 lines!)
 
 ## CLI
 
-Not implemented yet. But it will look something like this: 
-
     # serve both mimeo caches on your local machine
-    mimeo serve
+    mimeo serve <port:3500>
     # clean the cache
     mimeo clean
     # find the location of your cache
     mimeo where
+    # figure out the paths to popular libraries on public CDNs
+    # and on the Mimeo localhost.
+    mimeo find <semver>
+
+E.g. `mimeo find underscore.js@1.3.3` will return
+
+    Mimeo: 
+		underscore.js/1.3.3/underscore-min.js
+	CDN: 
+		http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js
+
+So you know you can find Underscore.js through Mimeo at `http://localhost:3500/underscore.js/1.3.3/underscore-min.js`

@@ -1,10 +1,10 @@
 {
   "author": "Stijn Debrouwere <stijn@stdout.be> (http://stdout.be)",
-  "name": "cdnify",
+  "name": "mimeo",
   "description": "Mimeo is the airplane mode for your application. Automatically cache and serve common JavaScript libraries or any kind of file from your development machine.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
-    "url": ""
+    "url": "https://github.com/stdbrouw/mimeo"
   },
   "main": "lib/index.js",
   "engines": {
@@ -15,6 +15,8 @@
     "express": "2.x",
     "request": "2.x",
     "mime": "1.x",
+    "optimist": "0.3.x",
+    "envv": "0.3.x"
   },
   "devDependencies": {
     "mocha": "0.14.x"
