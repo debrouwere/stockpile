@@ -2,7 +2,7 @@
   "author": "Stijn Debrouwere <stijn@stdout.be> (http://stdout.be)",
   "name": "stockpile",
   "description": "Stockpile is the airplane mode for your application. Automatically cache and serve common JavaScript libraries or any kind of file from your development machine.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": {
     "url": "https://github.com/stdbrouw/stockpile"
   },
