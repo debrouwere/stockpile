@@ -3,6 +3,7 @@ fs.path = require 'path'
 crypto = require 'crypto'
 express = require 'express'
 request = require 'request'
+mime = require 'mime'
 
 # creating and cleaning the cache are synchronous because these are generally init steps
 class FileCache
@@ -52,14 +53,17 @@ exports.middleware =
                 res.send 404
         # test cache
         filecache.get url, (errors, file) ->
-            res.contentType url
+            res.type mime.lookup url
             if file?
                 res.send file
             else
                 # fetch if not in cache, and then put in cache
                 request.get url, (errors, response, body) ->
                     if errors? or response.statusCode isnt 200
-                        res.send 404
+                        if next
+                            next()
+                        else
+                            res.send 404
                     else
                         filecache.put url, body
                         res.send body
