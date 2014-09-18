@@ -1,7 +1,5 @@
 # Stockpile
 
-[![Build Status](https://secure.travis-ci.org/stdbrouw/stockpile.png)](http://travis-ci.org/stdbrouw/stockpile)
-
 Stockpile is the airplane mode for your application. Automatically cache and then serve common JavaScript libraries or any kind of file from your development machine. Why? Because localhost is always faster and because being able to code without an internet connection is still kind of useful sometimes.
 
 ## Status
