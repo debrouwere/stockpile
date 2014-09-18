@@ -4,6 +4,12 @@
 
 Stockpile is the airplane mode for your application. Automatically cache and then serve common JavaScript libraries or any kind of file from your development machine. Why? Because localhost is always faster and because being able to code without an internet connection is still kind of useful sometimes.
 
+## Status
+
+Stockpile is **no longer actively maintained**. For an easy way to manage front-end dependencies, try [Bower](http://bower.io/) instead.
+
+## Usage
+
 Stockpile comes in two flavors, each express.js HTTP servers, so they're easily attached to any existing application. You can also use it standalone, though the `stockpile` command-line interface. Lastly, Stockpile is packaged together with [Draughtsman](https://github.com/stdbrouw/draughtsman), a web server that aids in front-end prototyping and development.
 
 Stockpile will keep files cached indefinitely so don't use it for files that change often. Stockpile does not understand HTTP cache or expires headers.
